@@ -1,0 +1,427 @@
+/*
+ * Base structure
+ */
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+html {
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+}
+
+h2 {
+  color: #337ab7;
+}
+
+/*
+ * Header
+ */
+
+ .navbar-light, .nav-masthead .nav-li, .dropdown-menu {
+  padding: .25rem 0;
+  font-weight: 500;
+  color: #a11f20;
+  background-color: rgba(255, 255, 255, 0.781);
+  border-bottom: .25rem solid transparent;
+  font-size: medium;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #a11f20;
+  font-size: medium;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #a11f20;
+  text-decoration: underline;
+  font-size: medium;
+}
+
+.navbar-light .navbar-brand {
+  font-weight: 500;
+  color: #a11f20;
+  font-size: large;
+  width: 70%;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.541);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  border-bottom-color: #fff;
+  font-weight: 700;
+  font-size: x-large;
+}
+
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: #a11f20;
+  text-decoration: underline;
+}
+
+/*
+ * Common
+ */
+
+h1, .h1 {
+  font-size: calc(2*1.375rem);
+  color:#a11f20;
+}
+
+
+/*
+ * Content specific
+ */
+
+.front {
+  background-image: url("../img/CF032684.webp");
+  color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;  
+}
+
+section {
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+}
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: white;
+  color: black;
+
+  width: 100vw;
+}
+
+.image-first {
+  flex-direction: row;
+}
+
+.text-first {
+  flex-direction: row-reverse;
+}
+
+.section {
+  margin-top: 9em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+  text-align: left;
+  flex: 2 1 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100vw;
+}
+
+.section .p {
+  text-align: left;
+}
+
+.a {
+  color: #a11f20;
+}
+
+.red {
+  color: #a11f20;
+}
+
+.portrait, .landscape {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;  
+  height: 100vh;
+}
+
+.presentation {
+  background-image: url("../img/yves-label.webp");
+}
+
+.presentation2 {
+  background-image: url("../img/bol-d-or.jpeg");
+}
+
+.presentation-batiment {
+  background-image: url("../img/CF035598.webp");
+}
+
+.presentation-presse {
+  background-image: url("https://cdn.unitycms.io/image/ocroped/2001,2000,1000,1000,0,0/72Lt_K-Pln0/A0ErQhszaaIB8K3cxj7oQV.jpg");
+  background-position: left 25% center;
+}
+
+.prestations {
+  background-image: url("../img/CF032741.webp");
+}
+
+.torqeedo {
+  background-image: url("../img/torqeedo.jpg");
+  width: 100vw;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;  
+  height: 100vh;
+
+  flex-direction: column-reverse;
+}
+
+.actu {
+  background-image: url("../img/mosaique-instagram.jpg");
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.contact {
+  background-image: url("../img/port-moratel-cndm.jpg");
+}
+
+.peinture {
+  background-image: url("../img/cabine_giclage.jpg");
+}
+
+.background-blue {
+  background-color:#b8d7e2;;
+}
+
+.section-wood {
+  background-color: #ece8df;
+}
+
+.section-torqeedo {
+  background-color: #010101;
+  color: #fff;
+}
+
+.section-transblack {
+  background-color: #000000c7;
+  color: #fff;
+  margin-top: 0;
+  padding-top: 9em;
+  padding-bottom: 2em;
+  /* align text at the bottom */
+  display: inline-flex;
+  flex-direction: column-reverse;
+}
+
+.contact-container {
+  display:flex; 
+  /* row on landscape, large screen, blocks width 100% forces wrap */
+  flex-direction:row; 
+  flex-wrap: wrap; 
+  width: 100%;
+  height: 100%;
+  /* don't take the blocks too far away */
+  max-height: 50vh;
+  justify-content: space-between;
+}
+
+@media (min-width: 0px) {
+  h1, .h1 {
+    font-size: 1.25rem;
+  }
+  h2, .h2 {
+    font-size: 1rem;
+  }
+  nav {
+    width: 100vw;
+  }
+  .image {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .image div {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .image div a {
+    font-size: x-small;
+    background-color: #01010183;
+    width: fit-content;
+    border-radius: .5em 0 0 0;
+    color: #a1a1a1;
+    align-items: flex-end;
+    color: #a1a1a1;
+    padding: 0em .6em 0.2em .6em;
+  }
+  .image button {
+    background-color: #0000009e;
+    width: fit-content;
+    align-self: center;
+    border-radius: .4em;
+    margin-bottom: 4em;
+  }
+
+  /* small : always text first */
+  .image-first { 
+    flex-direction: column;
+  }
+  .text-first {
+    flex-direction: column-reverse;
+  }  
+  .section {
+    width: 100%;
+    overflow: scroll;
+    margin-top: 0.9em;
+  }
+  .text-first .section {
+    margin-top: 9em;
+  }
+  .landscape, .portrait {
+    width: 100%;
+    height: 50vh;
+  }
+  .section-transblack {
+    flex: 0 0 fit-content;
+  }
+  .section-container {
+    flex-wrap: nowrap;
+  }
+  .arrow3 {
+    /* put arrow-down button to the bottom */
+    position: fixed;
+    top: 100vh;
+    left: 50vw;
+    /* rework centering, bring it up a bit (reference is its size) */
+    /* phone broser put navigatin bar on the bottom, raise up the button */
+    translate: -50% -170%;
+  }
+  .contact-block {
+    width: fit-content;
+  }
+
+
+  .scrollable-container {
+    overflow: scroll;
+  
+  /*
+  elipsis for overflow scroll
+  make black dots on the scroll background
+  slip under white ones on the local background
+  cheap solution, but JS would be better
+  */
+  background-image: url(/img/ellipsis-hidden.svg), url(/img/ellipsis-solid.svg);
+
+  background-repeat: no-repeat;
+  background-position: 97% bottom;
+  background-size: 1rem;
+  background-attachment: local, scroll; 
+}
+
+}
+@media (min-width: 768px) {
+  h1, .h1 {
+    font-size: 2rem;
+  }
+  h2, .h2 {
+    font-size: 1rem;
+  }
+  .navbar-light .navbar-brand {
+    font-size: larger;
+  }
+  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    font-size: medium;
+  }
+  /* bigger : allow image first */
+  .image-first { 
+    flex-direction: row;
+  }  
+  .text-first { 
+    flex-direction: row-reverse;
+  }  
+  .image {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .image div {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .image div a {
+    font-size: x-small;
+    background-color: #01010183;
+    width: fit-content;
+    border-radius: .5em 0 0 0;
+    color: #a1a1a1;
+    align-items: flex-end;
+    color: #a1a1a1;
+    padding: 0em .6em 0.2em .6em;
+  }
+  .portrait {
+    width: 40%;
+    height: 100vh;
+  }
+  .landscape {
+    width: 60%;
+    height: 100vh;
+  }
+  .section-transblack {
+    flex: 0 0 40%;
+    width: 40%;
+  }
+  .section {
+    margin-top: 11rem;
+    overflow: scroll;
+  }
+  .section-container {
+    flex-wrap: wrap;
+  }
+  .contact-block {
+    width: 100%;
+  }
+  .scrollable-container {
+    /* hide previous background */
+    background: none;
+  }
+  
+}
+@media (min-width: 1200px) {
+  h1, .h1 {
+    font-size: 3rem;
+  }
+  h2, .h2 {
+    font-size: 2rem;
+  }
+  .navbar-light .navbar-brand {
+    font-size: xx-large;
+  }
+  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    font-size: x-large;
+  }
+}
+
+.cndm-map-container {
+  height: 100%;
+  padding: 0px 1rem 1rem 1rem;
+  padding: 0px 1vmin 1vmin 1vmin;
+}
+
+.cndm-map {
+  height: 100%;
+  width: 100%;
+/*   We use outline over border as has issues in some cases */
+  outline: 1px solid black;
+}
+
+#mapid {
+  height: 100%;
+
+}
+
